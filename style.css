@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --light-green: rgb(211, 236, 174);
+  --dark-green: rgb(62, 78, 38);
+  --light-gray: #e4e3e3;
+}
+@font-face {
+  font-family: PopLight;
+  src: url(./fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: PopRegular;
+  src: url(./fonts/Poppins/Poppins-Regular.ttf);
+}
+
+html,
+body {
+  background-color: var(--light-gray);
+  font-family: PopLight;
+  color: var(--dark-green);
+}
+
+main {
+  overflow: hidden;
+}
+
+#home {
+  background-color: var(--light-green);
+  width: 100vw;
+  height: 100vh;
+  padding: 2vw 5vw;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 4px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 50px;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--dark-green);
+}
+
+nav > a:nth-child(4) > img {
+  opacity: 0;
+}
+
+.border {
+  border: 2px solid black;
+  padding: 10px 35px;
+}
+
+#center-heading {
+  width: fit-content;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#center-heading h1 {
+  font-size: 130px;
+  letter-spacing: 15px;
+}
+
+#center-heading h2 {
+  letter-spacing: 6px;
+}
+
+#articles {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7vw 5vw;
+  justify-content: space-between;
+}
+
+#articles h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#cards {
+  display: flex;
+  gap: 50px;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+}
+
+.card p {
+  margin-top: 50px;
+}
+
+#about {
+  margin-top: 150px;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#about img {
+  width: 55%;
+}
+
+#content {
+  padding: 100px;
+  text-align: center;
+  width: 40%;
+}
+
+#content h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#content p {
+  font-size: 15px;
+}
+
+#subscribe {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#subscribe h2 {
+  font-size: 15px;
+  margin-top: -30px;
+}
+
+#subscribe input {
+  padding: 15px;
+  width: 400px;
+  border: 2px solid white;
+}
+
+input::placeholder {
+  font-family: PopLight;
+  font-size: 12px;
+}
+
+#subscribe button {
+  padding: 10px 40px;
+  background-color: var(--light-gray);
+  letter-spacing: 5px;
+  font-family: PopLight;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 4px;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 50px;
+}
+
+@media (min-width: 475px) {
+  nav > a:nth-child(4) > img {
+    opacity: 1;
+  }
+  nav > a {
+    opacity: 0;
+  }
+}
